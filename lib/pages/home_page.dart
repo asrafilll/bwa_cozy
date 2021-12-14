@@ -1,8 +1,10 @@
 import 'package:bwa_cozy/models/city.dart';
 import 'package:bwa_cozy/models/space.dart';
+import 'package:bwa_cozy/models/tips.dart';
 import 'package:bwa_cozy/theme.dart';
 import 'package:bwa_cozy/widgets/city_card.dart';
 import 'package:bwa_cozy/widgets/space_card.dart';
+import 'package:bwa_cozy/widgets/tips_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -128,6 +130,33 @@ class HomePage extends StatelessWidget {
             Text(
               "Tips & Guidance",
               style: regularTextStyle.copyWith(fontSize: 16),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            TipsCard(Tips(
+                id: 1,
+                name: 'City Guidelines',
+                imageUrl: 'assets/images/tips1.png',
+                updatedTime: 'Updated 20 Apr')),
+            SizedBox(
+              height: 20,
+            ),
+            TipsCard(Tips(
+                id: 2,
+                name: 'Jakarta Fairship',
+                imageUrl: 'assets/images/tips2.png',
+                updatedTime: 'Updated 11 Dec')),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              height: 65,
+              width: MediaQuery.of(context).size.width - (2 * edge),
+              decoration: BoxDecoration(
+                  color: Color(0xffF6F7F8),
+                  borderRadius: BorderRadius.circular(23)),
+              child: Row(),
             )
           ],
         ),
