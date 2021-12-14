@@ -1,6 +1,8 @@
 import 'package:bwa_cozy/models/city.dart';
+import 'package:bwa_cozy/models/space.dart';
 import 'package:bwa_cozy/theme.dart';
 import 'package:bwa_cozy/widgets/city_card.dart';
+import 'package:bwa_cozy/widgets/space_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,6 +14,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: ListView(
           children: [
+            // NOTE: TITLE/HEADER
             Text(
               "Explore Now",
               style: blackTextStyle.copyWith(
@@ -30,6 +33,8 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+
+            // NOTE : POPULAR CITIES
             Text(
               "Popular Cities",
               style: regularTextStyle.copyWith(
@@ -51,10 +56,13 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     width: 20,
                   ),
-                  CityCard(City(
-                      id: 2,
-                      name: "Bandung",
-                      image_url: 'assets/images/city2.png')),
+                  CityCard(
+                    City(
+                        id: 2,
+                        name: "Bandung",
+                        image_url: 'assets/images/city2.png',
+                        isPopular: true),
+                  ),
                   SizedBox(
                     width: 20,
                   ),
@@ -62,8 +70,64 @@ class HomePage extends StatelessWidget {
                       id: 3,
                       name: "Surabaya",
                       image_url: 'assets/images/city3.png')),
+                  SizedBox(
+                    width: 24,
+                  )
                 ],
               ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            // NOTE : RECOMMENDED SPACE
+            Text("Recommended Space",
+                style: regularTextStyle.copyWith(
+                  fontSize: 16,
+                )),
+            SizedBox(
+              height: 16,
+            ),
+            Column(
+              children: [
+                SpaceCard(Space(
+                    id: 1,
+                    name: 'Kuretakeso Hott',
+                    imageUrl: 'assets/images/space1.png',
+                    price: 52,
+                    city: 'Bandung',
+                    country: 'Germany',
+                    rate: 4)),
+                SizedBox(
+                  height: 30,
+                ),
+                SpaceCard(Space(
+                    id: 2,
+                    name: 'Roemah Nenek',
+                    imageUrl: 'assets/images/space2.png',
+                    price: 11,
+                    city: 'Seattle',
+                    country: 'Bogor',
+                    rate: 5)),
+                SizedBox(
+                  height: 30,
+                ),
+                SpaceCard(Space(
+                    id: 3,
+                    name: 'Darrling How',
+                    imageUrl: 'assets/images/space3.png',
+                    price: 20,
+                    city: 'Jakarta',
+                    country: 'Indonesia',
+                    rate: 3)),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            //NOTE : TIPS & GUIDANCE
+            Text(
+              "Tips & Guidance",
+              style: regularTextStyle.copyWith(fontSize: 16),
             )
           ],
         ),

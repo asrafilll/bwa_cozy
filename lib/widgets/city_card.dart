@@ -16,12 +16,33 @@ class CityCard extends StatelessWidget {
         color: Color(0xffF6F7F8),
         child: Column(
           children: [
-            Image.asset(
-              city.image_url,
-              height: 102,
-              width: 120,
-              fit: BoxFit.cover,
-            ),
+            Stack(children: [
+              Image.asset(
+                city.image_url,
+                height: 102,
+                width: 120,
+                fit: BoxFit.cover,
+              ),
+              city.isPopular
+                  ? Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        width: 50,
+                        height: 30,
+                        child: Center(
+                            child: Image.asset(
+                          'assets/images/icon_star.png',
+                          width: 22,
+                          height: 22,
+                        )),
+                        decoration: BoxDecoration(
+                            color: purpleColor,
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(30))),
+                      ),
+                    )
+                  : Container(),
+            ]),
             SizedBox(
               height: 11,
             ),
@@ -30,7 +51,7 @@ class CityCard extends StatelessWidget {
               style: blackTextStyle.copyWith(
                 fontSize: 16,
               ),
-            )
+            ),
           ],
         ),
       ),
