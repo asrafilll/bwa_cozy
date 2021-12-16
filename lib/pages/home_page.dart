@@ -13,41 +13,54 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: ListView(
-          children: [
-            // NOTE: TITLE/HEADER
-            Text(
+          child: ListView(
+        children: [
+          SizedBox(
+            height: edge,
+          ),
+          // NOTE: TITLE/HEADER
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Text(
               "Explore Now",
               style: blackTextStyle.copyWith(
                 fontSize: 24,
               ),
             ),
-            SizedBox(
-              height: 2,
-            ),
-            Text(
+          ),
+          SizedBox(
+            height: 2,
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Text(
               "Mencari kosan yang cozy",
               style: greyTextStyle.copyWith(
                 fontSize: 16,
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
 
-            // NOTE : POPULAR CITIES
-            Text(
+          // NOTE : POPULAR CITIES
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Text(
               "Popular Cities",
               style: regularTextStyle.copyWith(
                 fontSize: 16,
               ),
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Container(
               height: 150,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -79,18 +92,24 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
-            // NOTE : RECOMMENDED SPACE
-            Text("Recommended Space",
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          // NOTE : RECOMMENDED SPACE
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Text("Recommended Space",
                 style: regularTextStyle.copyWith(
                   fontSize: 16,
                 )),
-            SizedBox(
-              height: 16,
-            ),
-            Column(
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Column(
               children: [
                 SpaceCard(Space(
                     id: 1,
@@ -124,48 +143,72 @@ class HomePage extends StatelessWidget {
                     rate: 3)),
               ],
             ),
-            SizedBox(
-              height: 30,
-            ),
-            //NOTE : TIPS & GUIDANCE
-            Text(
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          //NOTE : TIPS & GUIDANCE
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: Text(
               "Tips & Guidance",
               style: regularTextStyle.copyWith(fontSize: 16),
             ),
-            SizedBox(
-              height: 16,
-            ),
-            TipsCard(Tips(
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: edge),
+            child: TipsCard(Tips(
                 id: 1,
                 name: 'City Guidelines',
                 imageUrl: 'assets/images/tips1.png',
                 updatedTime: 'Updated 20 Apr')),
-            SizedBox(
-              height: 20,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+              padding: EdgeInsets.only(left: edge),
+              child: TipsCard(Tips(
+                  id: 2,
+                  name: 'Jakarta Fairship',
+                  imageUrl: 'assets/images/tips2.png',
+                  updatedTime: 'Updated 11 Dec'))),
+          SizedBox(
+            height: 60 + edge,
+          ),
+        ],
+      )),
+      floatingActionButton: Container(
+        height: 65,
+        width: MediaQuery.of(context).size.width - (2 * edge),
+        decoration: BoxDecoration(
+            color: Color(0xffF6F7F8), borderRadius: BorderRadius.circular(23)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            BottomNavbarItem(
+              imageUrl: 'assets/images/icon_home.png',
+              isActive: true,
             ),
-            TipsCard(Tips(
-                id: 2,
-                name: 'Jakarta Fairship',
-                imageUrl: 'assets/images/tips2.png',
-                updatedTime: 'Updated 11 Dec')),
-            SizedBox(
-              height: 50,
+            BottomNavbarItem(
+              imageUrl: 'assets/images/icon_mail.png',
+              isActive: false,
             ),
-            Container(
-              height: 65,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  color: Color(0xffF6F7F8),
-                  borderRadius: BorderRadius.circular(23)),
-              child: Row(
-                children: [
-                  BottomNavbarItem(),
-                ],
-              ),
-            )
+            BottomNavbarItem(
+              imageUrl: 'assets/images/icon_card.png',
+              isActive: false,
+            ),
+            BottomNavbarItem(
+              imageUrl: 'assets/images/icon_love.png',
+              isActive: false,
+            ),
           ],
         ),
-      )),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
