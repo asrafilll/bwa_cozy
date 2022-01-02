@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "506063739974",
+    "project_id": "asrafil-cozy",
+    "storage_bucket": "asrafil-cozy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506063739974:android:28a7808fcee2c07a393e47",
+        "android_client_info": {
+          "package_name": "com.example.bwa_cozy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506063739974-02ivt6nneo9gdqupfv5o3sp1u9icn5e6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDql8pzjbrb7BVuEoe2ZtYX1vZvWPMB8yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506063739974-02ivt6nneo9gdqupfv5o3sp1u9icn5e6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
