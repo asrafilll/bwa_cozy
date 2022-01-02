@@ -56,29 +56,64 @@ class HomePage extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    CityCard(City(
+                    CityCard(
+                      City(
                         id: 1,
                         name: "Jakarta",
-                        image_url: 'assets/images/city1.png')),
+                        image_url: 'assets/images/city1.png',
+                      ),
+                    ),
                     SizedBox(
                       width: 20,
                     ),
                     CityCard(
                       City(
-                          id: 2,
-                          name: "Bandung",
-                          image_url: 'assets/images/city2.png',
-                          isPopular: true),
+                        id: 2,
+                        name: "Bandung",
+                        image_url: 'assets/images/city2.png',
+                        isPopular: true,
+                      ),
                     ),
                     SizedBox(
                       width: 20,
                     ),
-                    CityCard(City(
-                        id: 3,
-                        name: "Surabaya",
-                        image_url: 'assets/images/city3.png')),
+                    CityCard(
+                      City(
+                          id: 3,
+                          name: "Surabaya",
+                          image_url: 'assets/images/city3.png'),
+                    ),
                     SizedBox(
-                      width: 24,
+                      width: 20,
+                    ),
+                    CityCard(
+                      City(
+                          id: 4,
+                          name: "Palembang",
+                          image_url: 'assets/images/city4.png'),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CityCard(
+                      City(
+                        id: 5,
+                        name: "Aceh",
+                        image_url: 'assets/images/city5.png',
+                        isPopular: true,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CityCard(
+                      City(
+                          id: 6,
+                          name: "Bogor",
+                          image_url: 'assets/images/city6.png'),
+                    ),
+                    SizedBox(
+                      width: 20,
                     )
                   ],
                 ),
