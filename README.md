@@ -15,4 +15,7 @@ I've learn these things while doing the course :
 
 ## Screenshots
 
-- https://github.com/asrafilll/bwa_cozy/blob/master/assets/images/app_screenshot/homescreen.jpg
+
+- ![SplashScreen](https://github.com/asrafilll/bwa_cozy/blob/master/assets/images/app_screenshot/splashscreen.jpg)
+- ![HomeScreen](https://github.com/asrafilll/bwa_cozy/blob/master/assets/images/app_screenshot/homescreen.jpg)
+- ![DetailScreen](https://github.com/asrafilll/bwa_cozy/blob/master/assets/images/app_screenshot/detailscreen.jpg)
