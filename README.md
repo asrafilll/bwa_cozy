@@ -15,4 +15,4 @@ I've learn these things while doing the course :
 
 ## Screenshots
 
-- assets\images\app_screenshot\splashscreen.jpg
+- https://github.com/asrafilll/bwa_cozy/blob/master/assets/images/app_screenshot/homescreen.jpg
