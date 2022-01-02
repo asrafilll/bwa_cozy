@@ -1,6 +1,8 @@
-# bwa_cozy
+# Cozy_FindHouseApp
 
-A new Flutter project.
+Here are my project from one of BWA Premium Courses. 
+Here is the course link if you are interested :
+https://buildwithangga.com/kelas/dart-flutter-development-bootcamp-find-house-app
 
 ## What I've Learnt
 
